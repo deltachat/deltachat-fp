@@ -1,0 +1,6 @@
+/backup/
+deltachat
+deltachat.dbg
+deltachat.lps
+/lib/
+*.res

@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 459
+  Height = 527
+  Top = 262
+  Width = 905
+  Caption = 'Form1'
+  ClientHeight = 498
+  ClientWidth = 905
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.0.8.0'
+  object ListViewChatlist: TListView
+    Left = 0
+    Height = 498
+    Top = 0
+    Width = 272
+    Align = alLeft
+    Columns = <>
+    GridLines = True
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    OnSelectItem = ListViewChatlistSelectItem
+  end
+  object Splitter1: TSplitter
+    Left = 272
+    Height = 498
+    Top = 0
+    Width = 5
+  end
+  object PanelChat: TPanel
+    Left = 277
+    Height = 498
+    Top = 0
+    Width = 628
+    Align = alClient
+    ClientHeight = 498
+    ClientWidth = 628
+    TabOrder = 2
+    object ListViewChat: TListView
+      Left = 8
+      Height = 448
+      Top = 8
+      Width = 608
+      Align = alCustom
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Columns = <>
+      GridLines = True
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object EditMessage: TEdit
+      Left = 8
+      Height = 26
+      Top = 464
+      Width = 528
+      Anchors = [akLeft, akRight, akBottom]
+      TabOrder = 1
+    end
+    object ButtonSend: TButton
+      Left = 544
+      Height = 25
+      Top = 464
+      Width = 75
+      Align = alCustom
+      Anchors = [akRight, akBottom]
+      Caption = 'Send'
+      Default = True
+      OnClick = ButtonSendClick
+      TabOrder = 2
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 32
+    top = 24
+    object MenuItemFile: TMenuItem
+      Caption = 'File'
+    end
+    object MenuItemHelp: TMenuItem
+      Caption = 'Help'
+      object MenuItemInfo: TMenuItem
+        Caption = 'Info'
+        OnClick = MenuItemInfoClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 112
+    top = 24
+  end
+end
